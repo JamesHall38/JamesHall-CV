@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import User from "./components/User"
+import Profil from "./components/Profil"
+import DarkMode from "./components/DarkMode"
+import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf"
+import { Preview, print } from 'react-html2pdf'
+
 
 function App() {
+  const handleGenerateCv = () => {
+    const cvTemplate = document.getElementById("cv-print")
+    cvTemplate.classList.add("cv-print")
+    document.body.classList.remove("dark")
+    print("James Hall - CV", "cv-print")
+    cvTemplate.classList.remove("cv-print")
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Preview id={"cv-print"} >
+      <div>
+        <div className="grid__container">
+          <div className="sidebar">
+            <div className="actions">
+              <DarkMode />
+              <button onClick={handleGenerateCv}>
+                <PictureAsPdfIcon />
+              </button>
+            </div>
+            <User />
+          </div>
+          <div className="main">
+            <Profil />
+          </div>
+        </div>
+      </div>
+    </Preview>
+  )
 }
 
-export default App;
+export default App
