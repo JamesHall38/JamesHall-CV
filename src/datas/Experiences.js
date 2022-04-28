@@ -3,7 +3,7 @@ export const dataExperiences = [
         id: 1,
         title: "Projets à l'université",
         equipe: "En équipe",
-        location: "IUT Grenooble",
+        location: "IUT Grenoble",
         text: `Différents projets réalisés à l'IUT Grenoble qui m'ont permi de me familiariser avec la programmation bas niveau.`,
         missions: [
             {
@@ -13,6 +13,10 @@ export const dataExperiences = [
             {
                 id: 2,
                 title: "Création d'un jeu en Python qui utilise le scraping pour récupérer des images",
+            },
+            {
+                id: 2,
+                title: "Programmation en assembleur d'un robot piloté par un STM32",
             }
         ],
     },
