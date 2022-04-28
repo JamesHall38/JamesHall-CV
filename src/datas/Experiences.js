@@ -4,7 +4,7 @@ export const dataExperiences = [
         title: "Projets à l'université",
         equipe: "En équipe",
         location: "IUT Grenoble",
-        text: `Différents projets réalisés à l'IUT Grenoble qui m'ont permi de me familiariser avec la programmation bas niveau.`,
+        text: `Différents projets réalisés à l'IUT Grenoble qui m'ont permis de me familiariser avec la programmation bas niveau.`,
         missions: [
             {
                 id: 1,
@@ -25,7 +25,7 @@ export const dataExperiences = [
         title: "Projets personnels",
         equipe: "Seul",
         location: "Grenoble",
-        text: `Sites adaptés à tout les écrans qui m'ont permi de me familiariser avec React , et travailler avec des API externes.`,
+        text: `Sites adaptés à tou les écrans qui m'ont permis de me familiariser avec React , et travailler avec des API externes.`,
         missions: [
             {
                 id: 1,

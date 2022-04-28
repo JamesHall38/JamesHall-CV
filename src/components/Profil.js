@@ -29,7 +29,7 @@ function Experiences(props) {
 
     return (
         <div className="cursus">
-            <h2>Expériences professionelles</h2>
+            <h2>Expériences professionnelles</h2>
             {datas.map(item => (
                 <div className="grid__row" key={item.id}>
                     <div className="grid__item">
