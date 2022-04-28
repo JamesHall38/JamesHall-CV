@@ -253,7 +253,7 @@ button {
 	width: 100% !important;
 }
 .cv-print .grid__container {
-	width: 210mm;
+	width: 220mm;
 	transform: scale(0.75);
 	transform-origin: 0 0;
 	margin: 0 -25% 0 0;
