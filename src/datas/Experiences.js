@@ -25,7 +25,7 @@ export const dataExperiences = [
         title: "Projets personnels",
         equipe: "Seul",
         location: "Grenoble",
-        text: `Sites adaptés à tout les écrans qui m'ont permi de me familiariser avec React , et travailler avec des API externes`,
+        text: `Sites adaptés à tout les écrans qui m'ont permi de me familiariser avec React , et travailler avec des API externes.`,
         missions: [
             {
                 id: 1,
