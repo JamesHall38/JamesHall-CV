@@ -1,4 +1,5 @@
 import "./App.css"
+import { useState } from 'react'
 import User from "./components/User"
 import Profil from "./components/Profil"
 import DarkMode from "./components/DarkMode"
@@ -7,6 +8,8 @@ import { Preview, print } from 'react-html2pdf'
 
 
 function App() {
+  const [languageIsFrench, setLanguageIsFrench] = useState(false)
+
   const handleGenerateCv = () => {
     const cvTemplate = document.getElementById("cv-print")
     cvTemplate.classList.add("cv-print")
@@ -21,18 +24,23 @@ function App() {
           <div className="sidebar">
             <div className="actions">
               <DarkMode />
-              <button onClick={handleGenerateCv}>
-                <PictureAsPdfIcon />
-              </button>
+              <div className="buttons">
+                <button onClick={() => setLanguageIsFrench(!languageIsFrench)}>
+                  {languageIsFrench ? 'FR' : 'EN'}
+                </button>
+                <button onClick={handleGenerateCv}>
+                  <PictureAsPdfIcon />
+                </button>
+              </div>
             </div>
-            <User />
+            <User languageIsFrench={languageIsFrench} />
           </div>
           <div className="main">
-            <Profil />
+            <Profil languageIsFrench={languageIsFrench} />
           </div>
         </div>
       </div>
-    </Preview>
+    </Preview >
   )
 }
 

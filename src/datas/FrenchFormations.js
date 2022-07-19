@@ -1,4 +1,4 @@
-const dataFormations = [
+const frenchDataFormations = [
     {
         id: 1,
         title: "DUT Génie électrique et informatique industrielle ( GEII )",
@@ -12,4 +12,4 @@ const dataFormations = [
         location: "Lycée Alain Borne Montélimar",
     }
 ]
-export default dataFormations
+export default frenchDataFormations

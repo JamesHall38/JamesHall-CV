@@ -1,14 +1,17 @@
 import React from "react"
-import DataFormations from "../datas/Formations"
-import DataExperiences from "../datas/Experiences"
+import frenchDataFormations from "../datas/FrenchFormations"
+import frenchDataExperiences from "../datas/FrenchExperiences"
+import englishDataFormations from "../datas/EnglishFormations"
+import englishDataExperiences from "../datas/EnglishExperiences"
 
 
-function Formations(props) {
-    const datas = props.datas
-
+function Formations({ languageIsFrench }) {
+    const datas = languageIsFrench ? frenchDataFormations : englishDataFormations
     return (
         <div className="cursus mb3">
-            <h2>Formations</h2>
+            {languageIsFrench
+                ? <h2>Formations</h2>
+                : <h2>Education</h2>}
             {datas.map(item => (
                 <div className="grid__row" key={item.id}>
                     <div className="grid__item">
@@ -24,12 +27,13 @@ function Formations(props) {
     )
 }
 
-function Experiences(props) {
-    const datas = props.datas
-
+function Experiences({ languageIsFrench }) {
+    const datas = languageIsFrench ? frenchDataExperiences : englishDataExperiences
     return (
         <div className="cursus">
-            <h2>Expériences professionnelles</h2>
+            {languageIsFrench
+                ? <h2>Expériences professionnelles</h2>
+                : <h2>Work experience</h2>}
             {datas.map(item => (
                 <div className="grid__row" key={item.id}>
                     <div className="grid__item">
@@ -53,22 +57,31 @@ function Experiences(props) {
     )
 }
 
-function Profil() {
+function Profil({ languageIsFrench }) {
+    console.log(languageIsFrench)
     return (
         <>
             <div className="profil mb5">
-                <h2>Profil</h2>
+                {languageIsFrench
+                    ? <h2>Profil</h2>
+                    : <h2>Objective</h2>}
                 <p>
-                    Je suis un développeur front-end junior,
+                    {languageIsFrench
+                        ? ` Je suis un développeur front-end junior,
                     passionné par l'informatique et aimant apprendre
                     de nouvelles technologies. Je recherche,
                     expérimente et améliore constamment mes
                     compétences pour offrir la meilleure expérience
-                    possible aux utilisateurs.
+                    possible aux utilisateurs. `
+                        : `I am a french junior front-end developer,
+                    passionate about computer science and loving to learn new technologies.
+                    I constantly research, experiment and improve my skills
+                    to provide the best possible user experience.`}
+
                 </p>
             </div>
-            <Formations datas={DataFormations} />
-            <Experiences datas={DataExperiences} />
+            <Formations languageIsFrench={languageIsFrench} />
+            <Experiences languageIsFrench={languageIsFrench} />
         </>
     )
 }

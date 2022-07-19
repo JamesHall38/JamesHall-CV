@@ -270,3 +270,8 @@ button {
 	grid-template-columns: 0.7fr 2.3fr;
 	margin: 0;
 }
+.buttons {
+	width: 50px;
+	display: flex;
+	justify-content: space-between;
+}
