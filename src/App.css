@@ -198,11 +198,11 @@ button {
 @media screen and (min-width: 768px) {
 	.grid__container {
 		display: grid;
-		grid-template-columns: 1fr 3fr;
+		grid-template-columns: 1fr 3.5fr;
 	}
 	.grid__row {
 		display: grid;
-		grid-template-columns: 0.7fr 2.3fr;
+		grid-template-columns: 0.7fr 3fr;
 		margin: 0;
 	}
 }
